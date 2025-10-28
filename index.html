@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Cost Auto Body & Auto Glass | Quality Auto Repair in South Salt Lake</title>
+    <meta name="description" content="Professional auto body repair and auto glass services in South Salt Lake, UT. Expert collision repair, paint work, and glass replacement at affordable prices.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a2332;
+            --secondary-color: #d32f2f;
+            --accent-color: #ff6b6b;
+            --text-light: #ffffff;
+            --text-dark: #1a2332;
+            --bg-light: #f5f5f5;
+            --bg-dark: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Top Bar with Phone */
+        .top-bar {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 12px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .top-bar a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--bg-dark) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 20px;
+            margin-top: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Low-Cost-Auto-Body-Auto-Glass.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-light);
+            color: var(--primary-color);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-light);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #666;
+        }
+
+        .about-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background-color: var(--bg-light);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 25px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
+
+        .review-body {
+            color: #666;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .show-more-btn {
+            display: block;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .show-more-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .show-more-btn.hidden {
+            display: none;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form {
+            background-color: var(--bg-light);
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-box {
+            background-color: var(--bg-light);
+            padding: 25px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .info-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .info-box p {
+            color: #666;
+            margin-bottom: 8px;
+            line-height: 1.8;
+        }
+
+        .info-box a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .info-box a:hover {
+            text-decoration: underline;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .time {
+            color: #666;
+        }
+
+        /* Map Section */
+        .map-section {
+            background-color: var(--bg-light);
+        }
+
+        .map-container {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: 450px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-color);
+            text-align: center;
+            line-height: 40px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <a href="tel:+18019069051">📞 Call Now: (801) 906-9051</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Low Cost Auto Body & Auto Glass</h1>
+            <p class="tagline">Professional Auto Repair Services in South Salt Lake</p>
+            <div class="cta-buttons">
+                <a href="tel:+18019069051" class="btn btn-primary">Call for Free Estimate</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Auto Body Repair</h3>
+                    <p>Expert collision repair services to restore your vehicle to pre-accident condition. We handle everything from minor dents to major structural repairs with precision and care.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Auto Glass Replacement</h3>
+                    <p>Professional windshield and auto glass replacement services. We use high-quality materials and expert installation techniques to ensure your safety on the road.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Paint & Refinishing</h3>
+                    <p>Complete paint and refinishing services using state-of-the-art equipment. We match your vehicle's original color perfectly for a seamless finish.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Dent Removal</h3>
+                    <p>Specialized dent removal and repair services that restore your vehicle's appearance without breaking the bank. Fast turnaround times available.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Insurance Claims</h3>
+                    <p>We work directly with all major insurance companies to make your claim process smooth and hassle-free. Let us handle the paperwork.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Frame Straightening</h3>
+                    <p>Advanced frame straightening services using computerized measuring systems to ensure your vehicle's structural integrity is fully restored.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Low Cost Auto Body & Auto Glass</h2>
+                    <p>With years of experience serving the South Salt Lake community, Low Cost Auto Body & Auto Glass has built a reputation for quality workmanship and honest, affordable pricing.</p>
+                    <p>Under the expert leadership of owner Ronny, our team is committed to providing exceptional auto body and glass repair services that exceed customer expectations every time.</p>
+                    <ul class="about-features">
+                        <li>Experienced and certified technicians</li>
+                        <li>State-of-the-art equipment and facilities</li>
+                        <li>Competitive pricing without compromising quality</li>
+                        <li>Insurance claim assistance</li>
+                        <li>Fast turnaround times</li>
+                        <li>Warranty on all repairs</li>
+                        <li>Family-owned and operated</li>
+                        <li>Serving South Salt Lake and surrounding areas</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="info-box">
+                        <h3>Why Choose Us?</h3>
+                        <p>✓ <strong>Quality Workmanship:</strong> We take pride in every repair we complete.</p>
+                        <p>✓ <strong>Affordable Prices:</strong> Get the best value for your money without sacrificing quality.</p>
+                        <p>✓ <strong>Fast Service:</strong> We understand you need your vehicle back quickly.</p>
+                        <p>✓ <strong>Customer Satisfaction:</strong> Your satisfaction is our top priority.</p>
+                        <p>✓ <strong>Local Business:</strong> Supporting our community for years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="reviews-grid" id="reviewsGrid"></div>
+            <button class="show-more-btn" id="showMoreBtn" onclick="showMoreReviews()"></button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <div class="success-message" id="successMessage">
+                        Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    </div>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3>Contact Information</h3>
+                        <p><strong>Phone:</strong> <a href="tel:+18019069051">(801) 906-9051</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:lowcost15@yahoo.com">lowcost15@yahoo.com</a></p>
+                        <p><strong>Address:</strong><br>2590 S 300 W<br>South Salt Lake, UT 84115</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/lowcostautobodyandglass/" target="_blank" title="Facebook">f</a>
+                            <a href="https://www.google.com/maps/place/Low+Cost+Auto+Body+%26+Auto+Glass/@40.7152184,-111.9026949,17z/data=!3m1!4b1!4m6!3m5!1s0x87528adef4ce6e2d:0x12cdacc62a15a20a!8m2!3d40.7152144!4d-111.9001146!16s%2Fg%2F11c5rpmsqr?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="Google Maps">G</a>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <h3>Business Hours</h3>
+                        <ul class="hours-list">
+                            <li><span class="day">Monday</span><span class="time">9 AM - 6 PM</span></li>
+                            <li><span class="day">Tuesday</span><span class="time">9 AM - 6 PM</span></li>
+                            <li><span class="day">Wednesday</span><span class="time">9 AM - 6 PM</span></li>
+                            <li><span class="day">Thursday</span><span class="time">9 AM - 6 PM</span></li>
+                            <li><span class="day">Friday</span><span class="time">9 AM - 6 PM</span></li>
+                            <li><span class="day">Saturday</span><span class="time">9 AM - 4 PM</span></li>
+                            <li><span class="day">Sunday</span><span class="time">Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Visit Us</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1271004471264!2d-111.90269488786464!3d40.71521843729842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528adef4ce6e2d%3A0x12cdacc62a15a20a!2sLow%20Cost%20Auto%20Body%20%26%20Auto%20Glass!5e0!3m2!1sen!2sus!4v1761612214987!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Low Cost Auto Body & Auto Glass</h3>
+                <p>Your trusted auto body and glass repair specialists in South Salt Lake, Utah.</p>
+                <p>Quality repairs at affordable prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>2590 S 300 W<br>South Salt Lake, UT 84115</p>
+                <a href="tel:+18019069051">(801) 906-9051</a>
+                <a href="mailto:lowcost15@yahoo.com">lowcost15@yahoo.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Low Cost Auto Body & Auto Glass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Reviews Data Array - EASILY ADD MORE REVIEWS HERE
+        const reviews = [
+            { name: "Customer 1", rating: 5, body: "" },
+            { name: "Customer 2", rating: 5, body: "" },
+            { name: "Customer 3", rating: 5, body: "" },
+            { name: "Customer 4", rating: 5, body: "" },
+            { name: "Customer 5", rating: 5, body: "" },
+            { name: "Customer 6", rating: 5, body: "" }
+        ];
+
+        let currentReviewIndex = 0;
+        const reviewsPerPage = 6;
+
+        function renderReviews() {
+            const reviewsGrid = document.getElementById('reviewsGrid');
+            const showMoreBtn = document.getElementById('showMoreBtn');
+            
+            // Clear existing reviews
+            reviewsGrid.innerHTML = '';
+            
+            // Render reviews up to current index
+            const reviewsToShow = reviews.slice(0, currentReviewIndex + reviewsPerPage);
+            reviewsToShow.forEach(review => {
+                const reviewCard = document.createElement('div');
+                reviewCard.className = 'review-card';
+                reviewCard.innerHTML = `
+                    <div class="review-header">
+                        <span class="reviewer-name">${review.name}</span>
+                        <span class="stars">${'★'.repeat(review.rating)}</span>
+                    </div>
+                    ${review.body ? `<p class="review-body">${review.body}</p>` : ''}
+                `;
+                reviewsGrid.appendChild(reviewCard);
+            });
+            
+            // Update show more button
+            const remainingReviews = reviews.length - (currentReviewIndex + reviewsPerPage);
+            if (remainingReviews > 0) {
+                showMoreBtn.textContent = `Show ${remainingReviews} More Review${remainingReviews > 1 ? 's' : ''} (Total ${reviews.length})`;
+                showMoreBtn.classList.remove('hidden');
+            } else {
+                showMoreBtn.classList.add('hidden');
+            }
+        }
+
+        function showMoreReviews() {
+            currentReviewIndex += reviewsPerPage;
+            renderReviews();
+        }
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Create mailto link with form data
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+            
+            const subject = `Contact Form Submission from ${name}`;
+            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+            
+            window.location.href = `mailto:lowcost15@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+            
+            // Show success message
+            document.getElementById('successMessage').classList.add('show');
+            
+            // Reset form
+            form.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.remove('show');
+            }, 5000);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize reviews on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            renderReviews();
+        });
+
+        // SQUARE PAYMENT INTEGRATION
+        // Replace YOUR_LOCATION_ID with your actual Square location ID
+        // Example: const SQUARE_LOCATION_ID = 'YOUR_LOCATION_ID';
+        // Uncomment and configure the following when ready to use Square payments:
+        /*
+        const SQUARE_LOCATION_ID = 'YOUR_LOCATION_ID';
+        const SQUARE_APPLICATION_ID = 'YOUR_APPLICATION_ID';
+        
+        async function initializeSquarePayment() {
+            const payments = Square.payments(SQUARE_APPLICATION_ID, SQUARE_LOCATION_ID);
+            const card = await payments.card();
+            await card.attach('#card-container');
+            
+            document.getElementById('card-button').addEventListener('click', async function() {
+                const result = await card.tokenize();
+                if (result.status === 'OK') {
+                    // Send result.token to your server
+                    console.log('Payment token:', result.token);
+                }
+            });
+        }
+        */
+    </script>
+</body>
+</html>
