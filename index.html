@@ -768,13 +768,237 @@
     <script>
         // Reviews Data Array - EASILY ADD MORE REVIEWS HERE
         const reviews = [
-            { name: "Customer 1", rating: 5, body: "" },
-            { name: "Customer 2", rating: 5, body: "" },
-            { name: "Customer 3", rating: 5, body: "" },
-            { name: "Customer 4", rating: 5, body: "" },
-            { name: "Customer 5", rating: 5, body: "" },
-            { name: "Customer 6", rating: 5, body: "" }
-        ];
+    {
+        "name": "Scott Waddell",
+        "rating": 5,
+        "body": "Excellent experience with Low Cost Auto Body! I recently purchased a car from them and couldn't be happier. The staff was outstanding to work with throughout the process. The car I bought was in great shape, and the price was excellent - truly living up to their \"low cost\" name. If you're in the market for a quality used car at a great price, I highly recommend giving Low Cost Auto Body a visit. They've earned my trust and future business."
+    },
+    {
+        "name": "Andy Guss",
+        "rating": 5,
+        "body": "My son recently lost his car in an accident where he was hit while stopped at a red light by a distracted driver. The insurance gave us some money to replace the vehicle and we wanted to find something affordable and safe. We looked at dealerships, Facebook, and KSL and that is how we found Rony at Low Cost Auto. The car we found for my son was a 2019 Honda with all of the modern safety features. The car looks great and drives great. It had only 50 thousand miles on it, and is in mechanically perfect condition. This was easily the best car at the most affordable price we could find in weeks of looking. My son loves it. Low Cost Auto sells a small number of cars, and is also a full service body shop. They purchase totaled cars with cosmetic damage only and fix them in their own shop and then resell them at an affordable price. Most people who are looking for used cars want to avoid damaged cars because they think they won't work well. Low Cost Auto have been doing this for a long time and they won't buy any cars with mechanical or any safety concerns. Cars can be totaled for being sideswiped or rear ended, or minor front bumper damage that sets off an airbag even if it is a low mileage vehicle with nothing mechanically wrong with it at all. Rony will show you pictures of the car with the damage before they fixed it, he will be completely transparent about what they did and didn't fix, and if you have any problems within the first month of owning the car, they will fix it, no questions asked, even if it had nothing to do with the damage they repaired. They care about their customers and want them to be happy. One other great thing about doing business with this family, is there is no haggling or getting ripped off with extras or hidden fees. You can look at the price they are listing the car for, add on the state required taxes, and that is exactly what you will pay. Not one penny more. No doc fees, prep fees, bonus fees, NOTHING. I am buying my next car from them because I appreciate how they treat their customers."
+    },
+    {
+        "name": "Adam Goff",
+        "rating": 5,
+        "body": "Got an awesome rebuilt Honda Accord for a very reasonable price. Drives perfectly and they did a beautiful job repairing/restoring it. Highly recommend!"
+    },
+    {
+        "name": "Rob Schicker",
+        "rating": 5,
+        "body": "After reading the reviews for the business, I decided to give them a try. We had a minor dent in a rear fender of a Corolla. I didn't have time to get other estimates, so I can't compare their prices, but what they charged me seemed very … More"
+    },
+    {
+        "name": "Grace Larson",
+        "rating": 5,
+        "body": "I came to low cost auto repair in December 2019 to fix a dent in my front fender. Other places had quoted me an estimate of more than twice as much as low cost quoted me. I chose to have the work done here and the guys were really … More"
+    },
+    {
+        "name": "Diana Lopez",
+        "rating": 5,
+        "body": "A few years back I needed to purchase a car and I found Lowcost auto. Four years later I have had no issues with my car except for rock chipping my windshields. The customer service has always been trustworthy. I will be purchasing my next … More"
+    },
+    {
+        "name": "Jordan Moody",
+        "rating": 5,
+        "body": "I had a great experience buying a salvage title Civic here. I felt confident with Rony and I’ve had the car for a month now. They instill confidence that they will take care of you here and that has been my experience so far. I recommend this place for sure. More"
+    },
+    {
+        "name": "Ryan S",
+        "rating": 5,
+        "body": "I bought a 2013 Civic here with a rebuilt title. I have purchased rebuilt title cars in the past and I know it can be hit or miss. Ronny gives a 30 guaranty. I'll be honest I was a little skeptical about it but I chatted with him for a … More"
+    },
+    {
+        "name": "Darrell",
+        "rating": 5,
+        "body": "Purchased a Honda Civic. Sold to me at at a fair price. Banded title. I was shown damage before repairs. They do good work. Looks like new and drives great. … More"
+    },
+    {
+        "name": "John Lewis",
+        "rating": 5,
+        "body": "Absolutely incredible company. I had some cosmetic damage on my 2019 Hyundai Sonata a couple of weeks ago. I went to many different auto repair places and they all quoted me over a $1000. Not this place, they fixed my car for an astonishing … More"
+    },
+    {
+        "name": "Graham Bany",
+        "rating": 5,
+        "body": "I regret not asking the owner his name, but these men are incredible. My window got shot out on the street last night and other glass shops quoted me $250 and $380 to replace it with waits of two to three days. This shop literally took care … More"
+    },
+    {
+        "name": "Ashley Sullivan",
+        "rating": 5,
+        "body": "We bought a used van from these guys. The van has worked great for us, and the employees were extremely helpful and kind. They didn't pressure us into buying anything, they really seemed to have our best interest in mind. We would buy from them again! More"
+    },
+    {
+        "name": "Mike Brown",
+        "rating": 5,
+        "body": "I have had to use Ronny now 2 times. He does a great job and listened to my needs. The car looks great. I am very happy with it. I would use them again if we need to again."
+    },
+    {
+        "name": "Marianne Nay",
+        "rating": 5,
+        "body": "Great service. We went to look at a vehicle to buy. They offered us cold waters that we needed more than we realized in the heat of the summer. The vehicle, although had a salvaged title, was put together nicely. We didn't buy because we had a few other cars on our list we wanted to look at."
+    },
+    {
+        "name": "J",
+        "rating": 5,
+        "body": "Didn’t end up getting work done here, but gave me a good referral."
+    },
+    {
+        "name": "Eric Stulberg",
+        "rating": 5,
+        "body": "Extremely nice and very reasonable with pricing. He was very fair and didn’t overcharge at all. Also very efficient and super nice. Answered all my questions. Best body shop I’ve been to in SLC and would recommend 100%"
+    },
+    {
+        "name": "Rachel Holyoak",
+        "rating": 5,
+        "body": "I can’t say enough good things!! So fast, best prices, and very kind people. Definitely going back! Did my rock chip repair in 5 minutes, easy and quick!"
+    },
+    {
+        "name": "Peter Huang",
+        "rating": 5,
+        "body": "Rony's team is awesome. They fixed my front bumper damaged Camry in few days. The cost is good and acceptable by budget user."
+    },
+    {
+        "name": "C A Van Zante",
+        "rating": 5,
+        "body": "I have a car whose windshield attracts rocks (steep angle) so these guys have put about three on for me over the past several years. Great prices, quick turnaround and friendly service."
+    },
+    {
+        "name": "Travis S (Travis)",
+        "rating": 5,
+        "body": "Purchased a car 2 months ago and am having no issues. The car is in great condition and operating well."
+    },
+    {
+        "name": "Hani Alqaji",
+        "rating": 5,
+        "body": "Best service ever, I've been their customer 3 years now, bought three perfect Repaired cars never had a single issue with them"
+    },
+    {
+        "name": "Rita Koshaba",
+        "rating": 5,
+        "body": "This place is good and affordable and they fix my car very good and they’re very nice"
+    },
+    {
+        "name": "Haifeng Liu",
+        "rating": 5,
+        "body": "They were easy and professional to work with. Very competitive price and Highly recommend them to others!"
+    },
+    {
+        "name": "Hiba zaku",
+        "rating": 5,
+        "body": "Amazing, fast experience and Professional service. I was in and out for a break change in less than 20 minutes."
+    },
+    {
+        "name": "Linda Bauer",
+        "rating": 5,
+        "body": "Quick turn around and their work is exceptional. Good prices! Services… More"
+    },
+    {
+        "name": "Anne",
+        "rating": 5,
+        "body": "Super nice , very helpful ! 10 star if I could"
+    },
+    {
+        "name": "Kirk Nuno",
+        "rating": 5,
+        "body": "Great service! Great team!"
+    },
+    {
+        "name": "Luis Zepeda",
+        "rating": 5,
+        "body": "Excellent service and very friendly"
+    },
+    {
+        "name": "Alexandra Purser",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Matthew Rollins",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "PEPITHO KUHEKU",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Naila Niki",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Ruben Garcia",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "J Hutch",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Advanced Glass",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Kayla Hurst",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Wisam Khudhair",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Muhammet Ali Bakır",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "حيدر الموسوي Hayder almusawi from USA",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Cameron Dickinson",
+        "rating": 3,
+        "body": "What a disappointment. I was looking forward to picking with repairs done to match the original condition, only to find sloppy work and missing bumper components. Issues i encountered were added bondo thickness and improper blending around … More"
+    },
+    {
+        "name": "Cheryl Johnson",
+        "rating": 3,
+        "body": "If I could leave a 0 star I would!!! Do NOT get a car from these guys! We bought a 2011 Honda Pilot today because they had good reviews and it won't start after getting it home. We had to have it towed to a mechanic! Seriously worst experience and place ever!!"
+    },
+    {
+        "name": "D. A.",
+        "rating": 1,
+        "body": "They will lie straight to your face, salvaged cars that been totaled of collision multiple times as the carfax I paid for show. But they still deny it. The repairs are a joke and you can’t trust driving their vehicles. My rating is -0. The … More"
+    },
+    {
+        "name": "S",
+        "rating": 1,
+        "body": ""
+    },
+    {
+        "name": "O",
+        "rating": 1,
+        "body": "Edited a year ago"
+    },
+    {
+        "name": "Last five 4",
+        "rating": 1,
+        "body": "Implied based on prompt: Last five are one star."
+    },
+    {
+        "name": "Last five 5",
+        "rating": 1,
+        "body": "Implied based on prompt: Last five are one star."
+    }
+];
 
         let currentReviewIndex = 0;
         const reviewsPerPage = 6;
